@@ -6,7 +6,7 @@ Generate kubeconfig files with Terraform
 ```hcl
 module "kubeconfig" {
   source  = "redeux/kubeconfig/kubernetes"
-  version = "0.0.1"
+  version = "0.0.2"
 
   current_context = "kind-kind"
   clusters = [{
