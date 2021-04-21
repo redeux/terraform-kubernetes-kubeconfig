@@ -6,6 +6,9 @@ current-context: ${current_context}
 clusters: 
 %{ for cluster in clusters ~}
 - cluster:
+    %{~ if cluster.certificate_authority != null && cluster.insecure_skip_tls_verify != true ~}
+    certificate-authority: ${cluster.certificate_authority}
+    %{~ endif ~}
     %{~ if cluster.certificate_authority_data != null && cluster.insecure_skip_tls_verify != true ~}
     certificate-authority-data: ${cluster.certificate_authority_data}
     %{~ endif ~}
@@ -43,6 +46,12 @@ users:
     %{~ endif ~}
     %{~ if user.token != null ~}
     token: ${user.token}
+    %{~ endif ~}
+    %{~ if user.client_certificate != null ~}
+    client-certificate: ${user.client_certificate}
+    %{~ endif ~}
+    %{~ if user.client_key != null ~}
+    client-key: ${user.client_key}
     %{~ endif ~}
     %{~ if user.client_certificate_data != null ~}
     client-certificate-data: ${user.client_certificate_data}
