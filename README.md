@@ -7,7 +7,7 @@ Generate kubeconfig files with Terraform
 module "kubeconfig" {
   source  = "redeux/kubeconfig/kubernetes"
   version = "0.0.1"
-  
+
   current_context = "kind-kind"
   clusters = [{
     "name" : "kind-kind",
@@ -67,4 +67,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_kubeconfig_content"></a> [kubeconfig\_content](#output\_kubeconfig\_content) | n/a |
+| <a name="output_kubeconfig_path"></a> [kubeconfig\_path](#output\_kubeconfig\_path) | n/a |
