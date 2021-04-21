@@ -69,5 +69,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_kubeconfig_content"></a> [kubeconfig\_content](#output\_kubeconfig\_content) | n/a |
-| <a name="output_kubeconfig_path"></a> [kubeconfig\_path](#output\_kubeconfig\_path) | n/a |
+| <a name="output_kubeconfig_content"></a> [kubeconfig\_content](#output\_kubeconfig\_content) | HCL representation of kubeconfig file contents |
+| <a name="output_kubeconfig_path"></a> [kubeconfig\_path](#output\_kubeconfig\_path) | Path to the kubeconfig file |

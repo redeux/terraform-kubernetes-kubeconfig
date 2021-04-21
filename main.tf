@@ -5,8 +5,10 @@ resource "local_file" "kubeconfig" {
 
 output "kubeconfig_path" {
   value = local_file.kubeconfig.filename
+  description = "Path to the kubeconfig file"
 }
 
 output "kubeconfig_content" {
   value = yamldecode(local_file.kubeconfig.content)
+  description = "HCL representation of kubeconfig file contents"
 }
